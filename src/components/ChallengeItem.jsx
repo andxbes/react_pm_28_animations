@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 
 import { ChallengesContext } from '../store/challenges-context.jsx';
+import { motion } from 'framer-motion';
 
 export default function ChallengeItem({
   challenge,
@@ -27,7 +28,7 @@ export default function ChallengeItem({
   }
 
   return (
-    <li>
+    <motion.li layout>
       <article className="challenge-item">
         <header>
           <img {...challenge.image} />
@@ -59,6 +60,6 @@ export default function ChallengeItem({
           )}
         </div>
       </article>
-    </li>
+    </motion.li>
   );
 }
